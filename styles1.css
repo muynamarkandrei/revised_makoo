@@ -1,0 +1,383 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Dosis', cursive;
+    height: 100vh;
+    background-image: url('pictures/final_bg.png'); /* Replace 'your-background-image.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    color: #b56c23;
+    display: flex;
+    justify-content: flex-start; /* Aligning contents to the left */
+    align-items: center;
+    padding-left: 120px; /* Shift contents to the right */
+    padding-right: 1px; /* Add some padding to the right */
+}
+
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Dosis', cursive;
+}
+
+.foodlogo {
+    width: 110px ;  /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Add margin at the right for spacing */
+}
+
+/* Slogan styles */
+.slogan {
+    font-size: 70px;
+    color: #c5aa6a;
+    margin-top: 1x;
+    margin-left: 10px; /* Adjust margin as needed */
+    margin-bottom: 10px;
+}
+
+.span1{
+    color: #b56c23;
+}
+.span2{
+    color: #24c8d7;
+}
+
+/* Header styles */
+.header h2,
+.header h3{
+    text-align: center; /* Center the text */
+    margin-left: 0px; /* Adjust margin to keep them on the left */
+    margin-top: 1px;
+    margin-bottom:3px;
+}
+
+.header h3{
+    text-align: center; 
+    margin-bottom: 10px;
+}
+/* Additional styles for rounded input areas and proper spacing */
+.input-container {
+    margin-bottom: 12px; /* Add margin at the bottom for spacing */
+    display: flex; /* Display items in a row */
+    align-items: center; /* Align items vertically */
+}
+
+.input-container label {
+    margin-right: 30px; /* Add margin to the right of the label */
+}
+
+.input-container input {
+    width: calc(100% - 40px); /* Subtracting padding from both sides */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px; /* Rounded input */
+    background-color: #ffffff; 
+    margin-top: 10px; /* Add margin to separate from label */
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #000000;
+    outline: none; /* Remove outline */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#contactnumber
+{
+    width: 100%;
+    margin-left: -44px;
+}
+
+#address {
+    width: 90%; /* Adjust the width of the input area for Age */
+    /* Add any other specific styles for the Age input if needed */
+    margin-left: -10px;
+}
+
+.input-container input::placeholder {
+    color: #3a3a37; /* Placeholder text color */
+}
+
+.input-container input:focus {
+    background-color: #e1a3a3; /* Change background color on focus */
+}
+
+@keyframes appear {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		background-color: #fff;
+	}
+	45% {
+		transform: translate(-50%, -50%) scale(1.6);
+		background-color: #64aedf;
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1.7);
+		background-color: #ad97b3;
+	}
+	55% {
+		transform: translate(-50%, -50%) scale(1.6);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		background-color: #ca8489;
+	}
+}
+/* Reset styles for buttons, list items, and links */
+button,
+li,
+a {
+    all: unset;
+    box-sizing: border-box;
+}
+
+/* Dropdown styles */
+#dropdown {
+    border-radius: 12px;
+    --shadow-color: 60deg 13% 61%;
+    max-width: 345px;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    background-color: #c5aa6a; /* Beige background color */
+    border-radius: var(--border-radius);
+    position: relative;
+    margin-top: 23px;
+    margin-right: 160px;
+    margin-left: 75px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-toggle 
+{
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover 
+{
+    background-color: #c5aa6a;
+}
+
+.menu,
+.submenu 
+{
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    background-color: #f6f6f6;
+    
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+}
+
+.menu 
+{
+    position: absolute;
+}
+
+.submenu 
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff; 
+    padding: 10px;
+    
+    border-radius: 5px;
+}
+
+.submenu.submenu-mode-of-payments 
+{
+    position: absolute;
+    top: 35%;
+    left: 100%; 
+}
+
+.submenu-item 
+{
+    background-color: #fafafa; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.submenu-item:last-child 
+{
+    border-bottom: none;
+}
+
+.submenu-item:hover 
+{
+    background-color: #c5aa6a;
+}
+
+.menu-item,
+.submenu-item 
+{
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    width: 154px;
+}
+
+.menu-item:last-child,
+.submenu-item:last-child 
+{
+    border-bottom: none;
+}
+
+.menu-item:hover,
+.submenu-item:hover 
+{
+    background-color: #c5aa6a;
+}
+
+/* Additional styles for Mode of Payment and Dine-in/Take-out */
+.form-section h3,
+.mode-of-payment,
+.dine-in-take-out {
+    display: inline-block; /* Ensure buttons are displayed inline */
+    justify-content:center;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+/* Additional styles for the new comments/instructions section */
+.comments-instructions {
+    margin-top: 10px; /* Add margin to separate from buttons */
+    width: 100%; /* Make sure the section spans the full width */
+    display: flex; /* Use flexbox for positioning */
+    flex-direction: column; /* Arrange items vertically */
+}
+
+.comments-field {
+    margin-top: 10px; /* Add margin to separate from label */
+}
+
+.comments-textarea {
+    margin-top: 10px;
+    width: calc(100% - 0px); /* Subtracting padding from both sides */
+    padding: 12px 20px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 12px; /* Rounded textarea */
+    background-color: #ffffff; /* Beige background color */
+    resize: vertical; /* Allow vertical resizing */
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #1f1f09;
+    outline: none; /* Remove outline */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.comments-textarea::placeholder {
+    color: #000000; /* Placeholder text color */
+}
+
+.comments-textarea:focus {
+    background-color: #c5b492; /* Change background color on focus */
+}
+
+.order-button,
+.cancel-button {
+    display: inline-block; /* Ensure buttons are displayed inline */
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background-color: #24c8d7;
+    color: #b56c23;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 70px; /* Add spacing between buttons */
+}
+
+.order-button:hover,
+.cancel-button:hover {
+  background-color: #19b3da; /* Darker brown color on hover */
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    font-size: 20px;
+    color: #333;
+}
+
+.modal-overlay, #thankYouModal {
+    display: none;
+}
+
+.notification {
+    position: fixed;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: rgba(58, 42, 51, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease forwards, fadeOut 1s ease 2s forwards;
+}

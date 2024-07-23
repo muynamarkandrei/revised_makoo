@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Sevillana&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">
+                <img class="foodlogo" src="pictures/logo.png" alt="Logo">
+                <p class="slogan"><b><span class="span1">MA</span><span class="span2">KOO</span></b></p>
+            </div>
+            <header class="header">
+                <h2>Order Form</h2>
+                <h3><i>Life's too short Taiyaki 't easy.</i></h3>
+            </header>
+            <form action="#" method="POST">
+                <div class="form-section">
+                    <div class="input-container">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="contactnumber">Contact Number:</label>
+                        <input type="text" id="contactnumber" name="contactnumber" placeholder="Enter your contact number">
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your address">
+                    </div>
+
+                    <div id="dropdown">
+                        <button type="button" class="dropdown-toggle">
+                            <span>Mode of Payment</span>
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                        <ul class="menu" id="menu">
+                            <li class="menu-item"><a href="#">Cash On Delivery</a></li>
+                            <li class="menu-item dropdown">
+                                <a href="#" class="submenu-toggle">
+                                    <span>Online Payment</span>
+                                    <i class="fas fa-caret-right"></i>
+                                </a>
+                                <ul class="submenu submenu-mode-of-payments">
+                                    <li class="submenu-item"><a href="#">GCash</a></li>
+                                    <li class="submenu-item"><a href="#">Maya</a></li>
+                                    <li class="submenu-item"><a href="#">Bank Transfer</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="#">Online Payment with Voucher</a></li>
+                        </ul>
+                    </div>
+
+                    <input type="hidden" id="selectedPaymentMode" name="selectedPaymentMode" value="">
+              
+                <div class="comments-instructions">
+                    <div class="form-field comments-field">
+                        <label for="comments">Comments/Instruction (Optional):</label>
+                        <textarea id="comments" name="comments" class="comments-textarea" style="resize: none;"></textarea>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="order-button" id="placeOrderButton">Place Order</button>                      
+                    <button type="button" class="cancel-button">Cancel</button>
+                </div> 
+            </form>        
+        </div>
+    </div>
+
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank You for your Order!</p>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
